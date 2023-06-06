@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-iBB8bmCL7zP92ilE6RBfLe9g/27DC5c83nLZdPilpV/azeM8F5xUv5dM1SbpV9BQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-hzQ8DXxbu9CpRjr6vzB6xmke8bqJprq//ZtvvQoWyW6BqXGjK5MgOv6Uc1W8EvV/E5e0/3EGob3mPKzj6H0U6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+  <!-- Ajoutez le lien vers le fichier CSS d'Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+  <!-- Ajoutez le lien vers le fichier JavaScript d'Owl Carousel -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Czj2WYPeL66zIVkyT7v4tW4C8KyqnP4PeGx+p7fJr73rY5n5gs5r5B5FJ9X45kfP8lVXEZ6CM1Z6EhjJb1h+qA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Portfolio Data Scientist</title>
+</head>
+<body>
+  <header>
+    <div class="flux-line"></div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Accueil Section -->
+  <section id="accueil">
+    <video autoplay muted loop poster="chemin/vers/votre/image.jpg" id="bg-video">
+        <source src="chemin/vers/votre/video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+    
+    <div class="accueil-content">
+      <!-- Le contenu de la section d'accueil, par exemple le titre et le texte -->
+      <h1>Tristan Guichard</h1>
+      <p>Data Scientist | Machine Learning | Deep Learning</p>
+      <a href="#projets" class="cta">Voir mes projets</a>
+    </div>
+    <div class="play-btn-container">
+      <button id="play-btn" class="play-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+          <path d="M3 22V2L21 12L3 22Z"></path>
+        </svg>
+      </button>
+  </div>
+  </section>
+  <!-- INSERT SYSTEM SOLAIRE Section -->
+  <object type="text/html" data="system.html" width="100%" height="100%"></object>
+  <!-- A propos Section -->
+  <section id="a-propos" data-aos="fade-up">
+  <div class="a-propos-content">
+    <h2 class="a-propos-titre">À propos de moi</h2>
+    <div class="a-propos-texte">
+      <p>
+        Je suis un scientifique des données passionné par l'analyse de données, le machine learning et le deep learning. J'ai obtenu un diplôme en informatique et en statistiques et j'ai plusieurs années d'expérience dans ce domaine. J'aime travailler sur des projets stimulants et développer des solutions innovantes pour résoudre des problèmes complexes.
+      </p>
+    </div>
+    <div class="a-propos-photo-container owl-carousel owl-theme" style="margin-top: 20px;">
+      <div class="a-propos-photo-wrapper">
+        <img src="img/pixelartcod.png" alt="Votre photo" class="a-propos-photo" style="max-width: 150px; border-radius: 10px;">
+      </div>
+      <div class="a-propos-photo-wrapper">
+        <img src="img/photo.jpg" alt="photo" class="a-propos-photo" style="max-width: 150px; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section des Projets -->
+<section id="projets" data-aos="fade-up">
+  <h2>Projets</h2>
+  <div class="projets-content swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Projet 1 -->
+      <article class="projet projet-1" id="projet1">
+        <div class="projet-image-container">
+          <img src="img/1.png" alt="Image du Projet 1" class="projet-image" />
+
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-title">Analyse Prédictive des Ventes</h3>
+          <p class="projet-description">
+            Analyse et prévision des ventes futures d'un détaillant en ligne en utilisant l'apprentissage automatique.
+          </p>
+          <button id="openModalButton" class="projet-link">Voir le projet 🡩</button>
+        </div>
+      </article>
+
+      <!-- Modale pour le Projet 1 -->
+<div id="modal1" class="modal">
+    <!-- Contenu de la Modale -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Projet: Analyse Prédictive des Ventes</h2>
+        <p class="modal-description">
+            Cette analyse prédictive des ventes a été réalisée pour un détaillant en ligne avec l'objectif d'améliorer la précision de la prévision des ventes. L'analyse a été réalisée en utilisant des techniques d'apprentissage automatique.
+        </p>
+        <h3>Compétences utilisées:</h3>
+        <ul>
+            <li>Apprentissage automatique</li>
+            <li>Analyse de données</li>
+            <li>Python, Scikit-Learn, Pandas</li>
+        </ul>
+        <h3>Capture d'écran:</h3>
+        <img src="img/screenshot.png" alt="Capture d'écran du projet" class="modal-screenshot" />
+        <a href="https://github.com/username/project" class="modal-link">Voir le code source sur GitHub</a>
+    </div>
+</div>
+
+      <!-- Ajoutez d'autres projets ici -->
+    </div>
+  </div>
+</section>
+
+<!-- Script Javascript -->
+<script>
+  // Get the modal
+  var modal = document.getElementById("modal1");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("openModalButton");
+
+  // Get the element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.addEventListener('click', function() {
+    modal.style.display = "block";
+  })
+
+  // When the user clicks on <span> (x), close the modal
+  span.addEventListener('click', function() {
+    modal.style.display = "none";
+  })
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  })
+</script>
+
+
+
+
+
+
+<!-- Section Compétences -->
+<section id="competences" data-aos="fade-up" style="background-color: #F9F9F9; padding: 50px 0;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+
+    <!-- Titre de la section -->
+    <h2 style="font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 600; color: #333333; text-align: center; margin-bottom: 50px;">
+      Compétences
+    </h2>
+
+    <!-- Conteneur des cartes de compétences -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; gap: 30px;">
+
+      <!-- Carte de compétence : Langages de programmation -->
+      <div style="flex: 1 1 calc(25% - 30px); background-color: #FFFFFF; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; transition: transform 0.3s ease-in-out;">
+        <i class="fas fa-laptop-code" style="font-size: 80px; text-align: center; display: block; margin: 0 auto; color: #333;"></i>
+        <!-- Compétences listées -->
+        <h3 style="font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; color: #333333; text-align: center; margin: 20px 0;">Langages de programmation</h3>
+        <ul style="list-style: none; padding: 0; text-align: center; margin: 0;">
+          <li>Python</li>
+          <li>R</li>
+          <li>Scala</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <!-- Carte de compétence : Machine Learning & Deep Learning -->
+      <div style="flex: 1 1 calc(25% - 30px); background-color: #FFFFFF; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; transition: transform 0.3s ease-in-out;">
+        <i class="fas fa-brain" style="font-size: 80px; text-align: center; display: block; margin: 0 auto; color: #333;"></i>
+        <!-- Compétences listées -->
+        <h3 style="font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; color: #333333; text-align: center; margin: 20px 0;">Machine Learning & Deep Learning</h3>
+        <ul style="list-style: none; padding: 0; text-align: center; margin: 0;">
+          <li>Regression</li>
+          <li>Classification</li>
+          <li>Clustering</li>
+          <li>Neural Networks</li>
+        </ul>
+      </div>
+
+      <!-- Carte de compétence : Data Visualization -->
+      <div style="flex: 1 1 calc(25% - 30px); background-color: #FFFFFF; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; transition: transform 0.3s ease-in-out;">
+        <i class="fas fa-chart-bar" style="font-size: 80px; text-align: center; display: block; margin: 0 auto; color: #333;"></i>
+        <!-- Compétences listées -->
+        <h3 style="font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; color: #333333; text-align: center; margin: 20px 0;">Data Visualization</h3>
+        <ul style="list-style: none; padding: 0; text-align: center; margin: 0;">
+          <li>Matplotlib</li>
+          <li>Seaborn</li>
+          <li>Tableau</li>
+        </ul>
+      </div>
+
+      <!-- Carte de compétence : Big Data -->
+      <div style="flex: 1 1 calc(25% - 30px); background-color: #FFFFFF; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; transition: transform 0.3s ease-in-out;">
+        <i class="fas fa-database" style="font-size: 80px; text-align: center; display: block; margin: 0 auto; color: #333;"></i>
+        <!-- Compétences listées -->
+        <h3 style="font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; color: #333333; text-align: center; margin: 20px 0;">Big Data</h3>
+        <ul style="list-style: none; padding: 0; text-align: center; margin: 0;">
+          <li>Spark</li>
+          <li>Hadoop</li>
+          <li>Hive</li>
+          <li>Pig</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <div class="contact-container">
+      <h2>Contactez-moi</h2>
+      <p>Si vous souhaitez me contacter pour discuter d'un projet ou pour toute autre question, n'hésitez pas à remplir le formulaire ci-dessous :</p>
+      <form action="send_email.php" method="POST">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/votreprofil/" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon" /></a>
+        <a href="https://github.com/votreprofil" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon" /></a>
+        <a href="https://www.malt.fr/profile/votreprofil" target="_blank" rel="noopener noreferrer"><img src="img/maltLogo.png" alt="Logo Malt" class="malt-logo" /></a>
+        <a href="mailto:votre.email@example.com" target="_blank" rel="noopener noreferrer"><img src="img/email.png" alt="Email" class="icon" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Votre Nom. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+    <div class="sticky-sidebar">
+  <div class="social-link">
+    <a href="https://www.linkedin.com/in/votreprofil/" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon" />
+    </a>
+    <span class="custom-tooltip">Profil LinkedIn</span>
+  </div>
+  <div class="social-link">
+    <a href="https://github.com/votreprofil" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon" />
+    </a>
+    <span class="custom-tooltip">Profil GitHub</span>
+  </div>
+  <div class="social-link">
+    <a href="chemin/vers/votre/cv.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="img/maltLogo.png" alt="Malt" class="icon" />
+    </a>
+    <span class="custom-tooltip"> Profil Malt.fr</span>
+  </div>
+  <div class="social-link">
+    <a href="mailto:votre.email@example.com" target="_blank" rel="noopener noreferrer">
+      <img src="img/email.png" alt="Email" class="icon" />
+    </a>
+    <span class="custom-tooltip">E-mail</span>
+  </div>
+  <div class="social-link">
+    <a href="chemin/vers/votre/cv.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="img/cv.png" alt="CV" class="icon" />
+    </a>
+    <span class="custom-tooltip">CV</span>
+  </div>
+</div>
+
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".fade-in");
+
+    images.forEach((img) => {
+      img.addEventListener("load", function () {
+        img.classList.add("fade-in-loaded");
+      });
+
+      if (img.complete) {
+        img.classList.add("fade-in-loaded");
+      }
+    });
+  });
+</script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("bg-video");
+    const playBtn = document.getElementById("play-btn");
+
+    playBtn.addEventListener("click", function () {
+      if (video.paused) {
+        video.play();
+        playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+          <path d="M5 3H9V21H5zM15 3H19V21H15z"></path>
+        </svg>`;
+      } else {
+        video.pause();
+        playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+          <path d="M3 22V2L21 12L3 22Z"></path>
+        </svg>`;
+      }
+    });
+  });
+</script>
+  <script src="sketch.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.a-propos-photo-container');
+    const options = {
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: false,
+    };
+    
+    $(carousel).owlCarousel(options);
+  });
+</script>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+</html>
+

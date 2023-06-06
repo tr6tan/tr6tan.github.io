@@ -1,0 +1,722 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+#competences div:hover {
+  transform: translateY(-10px);
+}
+/* CSS pour les étoiles de notation */
+.note {
+  display: inline-block;
+  font-size: 24px;
+  color: #FFD700; /* Couleur jaune */
+}
+
+/* Style des étoiles pleines */
+.note::before {
+  content: '\2605'; /* Code du caractère étoile pleine */
+}
+
+/* Style des étoiles vides */
+.note::after {
+  content: '\2606'; /* Code du caractère étoile vide */
+  color: #E0E0E0; /* Couleur grise */
+}
+
+/* Style des étoiles partielles (demi-étoiles) */
+.note.partiel::after {
+  content: '\2605'; /* Code du caractère étoile pleine */
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+}
+/* CSS pour le style des projets */
+.projet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.projet-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projet-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.projet-description {
+  font-size: 16px;
+  text-align: center;
+}
+
+.projet-link {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.projet-link:hover {
+  background-color: #0056b3;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Ajouter ces règles pour le header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0070c9;
+}
+.flux-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #FF0000, #00FF00, #0000FF, #FFFF00, #FF00FF, #00FFFF, #FF0000);
+  background-size: 600% 100%;
+  z-index: -1; /* Pour positionner les lignes derrière les titres */
+  animation: fluxLineAnimation 5s linear infinite;
+}
+
+@keyframes fluxLineAnimation {
+  0% {
+    transform: translateX(-100%);
+    background-position: 0% 50%;
+  }
+  100% {
+    transform: translateX(100%);
+    background-position: 100% 50%;
+  }
+}
+/* Améliorer la section d'accueil */
+#accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem); /* 4rem est la hauteur du header */
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#accueil h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#accueil p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #0070c9;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #005aad;
+}
+#accueil {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* La hauteur de la section d'accueil est la hauteur de la fenêtre du navigateur */
+  overflow: hidden;
+  background-color: #000; /* Couleur d'arrière-plan pour les navigateurs qui ne supportent pas la vidéo */
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+/* Styles existants pour le bouton de lecture */
+.play-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-btn svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Nouveaux styles pour positionner le bouton de lecture en bas et le rendre légèrement transparent */
+.play-btn-container {
+  position: absolute;
+  bottom: 20px; /* ajustez la distance depuis le bas */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8; /* ajustez la transparence */
+}
+.accueil-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+/* Styles généraux pour les sections */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Modifier l'arrière-plan et la couleur des sections alternées */
+section:nth-child(even) {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Styles spécifiques pour la section "À propos" */
+.a-propos-content {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 2rem;
+}
+
+/* Style pour les cartes des projets */
+
+/* Style pour le conteneur des projets */
+.projets-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projet {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden; /* This keeps the image within the border radius */
+  margin-bottom: 20px;
+  background-color: white;
+  width: 40%; /* Change this value for your needs */
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* This is for the hover effect */
+}
+
+/* Hover effect for the project cards */
+.projet:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.32), 0 5px 15px rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px); /* This moves the card slightly upwards */
+}
+
+/* Style pour le conteneur de l'image du projet */
+.projet-image-container {
+  position: relative;
+  height: 50%;
+  width: 110%;
+}
+
+/* Style pour l'image du projet */
+.projet-image {
+  width: 100%;
+  height: auto;
+  display: block; /* This removes the white space under the image */
+}
+
+
+/* Style for project info */
+.projet-info {
+  padding: 15px;
+}
+
+/* Style pour le titre du projet */
+.projet-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style pour la description du projet */
+.projet-description {
+  margin-bottom: 20px;
+}
+
+/* Style pour les informations du projet */
+.projet-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style pour le bouton qui ouvre la modale */
+.projet-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.projet-link:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+
+
+
+/* Style pour la modale */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: auto;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* Style pour le bouton de fermeture de la modale */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* Compétences Section */
+#competences {
+  padding: 50px 0;
+  background-color: #F5F5F7;
+}
+
+.competences-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#competences h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.competence-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.competence-logo {
+  width: 64px;
+  height: 64px;
+}
+
+.competence-graph {
+  width: 100%;
+  height: auto;
+}
+.competence-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competence-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in-loaded {
+  opacity: 1;
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+  background-color: #F5F5F7;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0D96F2;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #007BDF;
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.social-links a:hover {
+  color: #0D96F2;
+}
+
+.malt-logo {
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+}
+.icon {
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+}
+.sticky-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.social-link,
+.cv-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000;
+  text-decoration: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.social-link {
+  position: relative;
+}
+
+.custom-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Ajustez la position en fonction de votre mise en page */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s; /* Ajustez la durée d'apparition */
+}
+
+.social-link:hover .custom-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/* Règles pour le responsive design */
+@media (max-width: 768px) {
+  .a-propos-content,
+  .projets-content,
+  .competences-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .a-propos-photo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .projet {
+    flex-direction: column;
+  }
+
+  .projet-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Adapter la taille du footer pour les petits écrans */
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  
+}
+
